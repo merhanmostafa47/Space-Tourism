@@ -2,10 +2,20 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  // import main style file
-  css: ['~/assets/scss/main.scss'],
+  css: [
+    '@/assets/css/styles.css',
+  ],
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
 
   modules: [
+    '@nuxtjs/tailwindcss',
+
     ['@nuxtjs/google-fonts', {
       families: {
         Bellefair: {

@@ -1,6 +1,12 @@
 <template>
   <header>
-    <h1 class="text-3xl font-bold text-center text-gray-800 font-barlow">Everyone</h1>
+    <h1>Everyone</h1>
+    <div class="description">
+      <h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ullam iste unde.
+      </h2>
+      <button>Get Started</button>
+    </div>
   </header>
 </template>
 

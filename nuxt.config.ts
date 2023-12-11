@@ -8,24 +8,29 @@ export default defineNuxtConfig({
 
   postcss: {
     plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
+      'postcss-preset-env': {
+        features: { 'nesting-rules': false },
+      },
+      'postcss-custom-selectors': {},
+      'postcss-mixins': {},
+      'postcss-import': {},
+      'tailwindcss/nesting': {},
+      'tailwindcss': {},
+      'autoprefixer': {},
     },
   },
 
   modules: [
-    '@nuxtjs/tailwindcss',
-
     ['@nuxtjs/google-fonts', {
       families: {
         Bellefair: {
-          wght: 400,
+          wght: [400, 500, 700],
         },
         'Barlow Condensed': {
-          wght: 400,
+          wght: [400, 500, 700],
         },
         Barlow: {
-          wght: 400,
+          wght: [400, 500, 700],
         },
       },
     }]
